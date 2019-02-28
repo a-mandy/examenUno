@@ -29,6 +29,9 @@ public class AnalitycsTest {
 		assertEquals("yo",result,"El resultado debería ser: yo ");
 	}
 	
-	
+	@Test
+	public void primeraMasLargaTest() {
+		
+	}
 
 }

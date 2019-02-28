@@ -7,13 +7,13 @@ public class Analitycs {
 		arreglo = frase.split(" ");
 		
 		String[] result = new String[3];
-		int maslarga=0;
 		
-		result = unaPalabraLarga(arreglo, maslarga, result);
+		
+		result = unaPalabraLarga(arreglo, result);
 		return result;	
 	}
 
-	private static String[] unaPalabraLarga(String[] arreglo,  int maslarga ,String[] result) {
+	private static String[] unaPalabraLarga(String[] arreglo ,String[] result) {
 		int larga = 0;
 		for(int i=0;i<3;i++){
 			if(arreglo[i].length() >larga) {
@@ -21,7 +21,6 @@ public class Analitycs {
 				result[0]= arreglo[i];
 			}else {
 				if(arreglo[i].length()==larga) {
-			
 					result[i]= arreglo[i];
 				}
 			}
@@ -41,6 +40,14 @@ public class Analitycs {
 				result[0]=arreglo[0];
 			}
 		}
+		
+		return result;
+	}
+	
+	public static String primeraMasLarga(String frase) {
+		String result = "";
+		String[] arreglo = frase.split(" ");
+		
 		
 		return result;
 	}
