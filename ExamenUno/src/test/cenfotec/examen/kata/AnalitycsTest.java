@@ -16,5 +16,17 @@ public class AnalitycsTest {
 		assertEquals("todo",result, "debería devolverla palabra: todo");
 		
 	}
+	@Test
+	public void masCortaTest() {
+		String frase = "yo casota casa";
+		
+		String[] arreglo = new String[3];
+		arreglo[0]= "yo";
+		arreglo[1]= "";
+		
+		String[] result= Analitycs.masCorta(frase);
+		
+		assertEquals("yo",result,"El resultado debería ser: yo ");
+	}
 
 }
