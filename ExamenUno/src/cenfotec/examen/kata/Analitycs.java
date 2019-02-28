@@ -5,22 +5,29 @@ public class Analitycs {
 	public static String[] masLarga(String frase){
 		String[] arreglo = new String[3]; 
 		arreglo = frase.split(" ");
-		String larga = "";
+		
 		String[] result = new String[3];
 		int maslarga=0;
 		
-		larga = unaPalabraLarga(arreglo, larga, maslarga);
+		result = unaPalabraLarga(arreglo, maslarga, result);
 		return result;	
 	}
 
-	private static String unaPalabraLarga(String[] result, String larga, int maslarga) {
+	private static String[] unaPalabraLarga(String[] arreglo,  int maslarga ,String[] result) {
+		int larga = 0;
 		for(int i=0;i<3;i++){
-			if(result[i].length() >maslarga) {
-				larga = result[i];
+			if(arreglo[i].length() >larga) {
+				larga = arreglo[i].length();
+				result[0]= arreglo[i];
+			}else {
+				if(arreglo[i].length()==larga) {
+			
+					result[i]= arreglo[i];
+				}
 			}
-			result[0]= larga;
+			
 		}
-		return larga;
+		return result;
 	}
 		
 	public static String[] masCorta(String frase) {
